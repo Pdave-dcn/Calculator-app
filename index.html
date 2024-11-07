@@ -21,14 +21,60 @@
     <title>Frontend Mentor | Calculator app</title>
   </head>
   <body>
-    <main></main>
+    <main>
+      <section class="calculator">
+        <div class="calculator__container">
+          <div class="calculator__container--header">
+            <h1 class="title">calc</h1>
+            <div class="theme">
+              <h2 class="theme__title">THEME</h2>
+              <div class="theme__elements">
+                <div class="theme__elements--labels">
+                  <label class="label label-1" for="theme-1">1</label>
+                  <label class="label label-2" for="theme-2">2</label>
+                  <label class="label label-3" for="theme-3">3</label>
+                </div>
+                <div class="theme__elements--btns">
+                  <input type="radio" name="theme" id="theme-1" checked />
+                  <input type="radio" name="theme" id="theme-2" />
+                  <input type="radio" name="theme" id="theme-3" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calculator__container--display">
+            <input type="number" class="input-element" readonly />
+          </div>
+          <div class="calculator__container--btns">
+            <button type="button">7</button>
+            <button type="button">8</button>
+            <button type="button">9</button>
+            <button type="button">DEL</button>
+            <button type="button">4</button>
+            <button type="button">5</button>
+            <button type="button">6</button>
+            <button type="button">+</button>
+            <button type="button">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button">-</button>
+            <button type="button">.</button>
+            <button type="button">0</button>
+            <button type="button">/</button>
+            <button type="button">X</button>
+            <button type="button">RESET</button>
+            <button type="button">=</button>
+          </div>
+        </div>
+      </section>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Pdave-dcn</a>.
-    </div>
-    <script src="main.js" type="module"></script>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Pdave-dcn</a>.
+      </div>
+      <script src="scripts/main.js" type="module"></script>
+    </main>
   </body>
 </html>

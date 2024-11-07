@@ -57,3 +57,26 @@ $theme-3-key-shadow-3: hsl(290, 70%, 36%);
 $theme-3-numbers-on-btn: hsl(52, 100%, 62%);
 $theme-3-del-reset-btn: white;
 $theme-3-equal-btn: hsl(198, 20%, 13%);
+
+// Properties
+
+@mixin radio-btns-config {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-20%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+@mixin reset-del-btn-inter {
+  &:hover {
+    background-color: hsl(225, 19%, 59%);
+  }
+
+  &:active {
+    background-color: hsl(228, 20%, 71%);
+  }
+}

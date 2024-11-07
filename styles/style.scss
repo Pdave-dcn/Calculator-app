@@ -1,5 +1,181 @@
 @import "./config.scss";
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $theme-1-main-background;
+  font-family: "League Spartan", Arial, Helvetica, sans-serif;
+}
+
+.calculator {
+  //width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__container {
+    row-gap: 20px;
+    width: 30%;
+    margin-top: 6em;
+    display: flex;
+    flex-direction: column;
+
+    &--header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex: 1;
+
+      .title {
+        color: white;
+      }
+
+      .theme {
+        display: flex;
+        align-items: last baseline;
+        gap: 1em;
+
+        &__title {
+          font-size: 0.6rem;
+          font-weight: 400;
+          color: white;
+        }
+
+        &__elements {
+          &--btns {
+            background-color: $theme-1-toggle-keypad-background;
+            padding: 4px;
+            border-radius: 15px;
+            display: flex;
+            gap: 13px;
+
+            input[type="radio"] {
+              -webkit-appearance: none;
+              appearance: none;
+              width: 7px;
+              height: 7px;
+              border-radius: 50%;
+              background-color: $theme-1-toggle-keypad-background;
+              position: relative;
+              cursor: pointer;
+            }
+
+            #theme-1:checked::before {
+              @include radio-btns-config();
+              background-color: $theme-1-key-background-toggle;
+            }
+
+            #theme-2:checked::before {
+              @include radio-btns-config();
+              background-color: $theme-2-key-background-toggle;
+            }
+
+            #theme-3:checked::before {
+              @include radio-btns-config();
+              background-color: $theme-3-key-background-toggle;
+            }
+          }
+
+          &--labels {
+            display: flex;
+            gap: 10px;
+            pointer-events: none;
+
+            .label {
+              color: white;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 10px;
+              width: 10px;
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    &--display {
+      box-sizing: border-box;
+
+      .input-element {
+        box-sizing: border-box;
+        pointer-events: none;
+        background-color: $theme-1-screen-background;
+        border: none;
+        height: 80px;
+        padding: 10px;
+        width: 100%;
+        border-radius: 8px;
+      }
+    }
+
+    &--btns {
+      background-color: $theme-1-toggle-keypad-background;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 20px;
+      padding: 15px;
+      border-radius: 8px;
+
+      button {
+        border-radius: 8px;
+        border: none;
+        height: 50px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        background-color: $theme-1-key-background-2;
+        box-shadow: 0 4px 0 $theme-1-key-shadow-3;
+        cursor: pointer;
+
+        &:hover {
+          background-color: hsl(36, 20%, 95%);
+        }
+
+        &:active {
+          background-color: white;
+        }
+      }
+
+      button:nth-child(17),
+      button:nth-child(18) {
+        grid-column: span 2;
+        color: white;
+      }
+
+      button:nth-child(4) {
+        background-color: $theme-1-key-background;
+        box-shadow: 0 4px 0 $theme-1-key-shadow;
+        color: white;
+        @include reset-del-btn-inter();
+      }
+
+      button:nth-child(17) {
+        background-color: $theme-1-key-background;
+        box-shadow: 0 4px 0 $theme-1-key-shadow;
+        @include reset-del-btn-inter();
+      }
+
+      button:nth-child(18) {
+        background-color: $theme-1-key-background-toggle;
+        box-shadow: 0 4px 0 $theme-1-key-shadow-2;
+
+        &:hover {
+          background-color: hsl(6, 67%, 56%);
+        }
+
+        &:active {
+          background-color: hsl(6, 74%, 63%);
+        }
+      }
+    }
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
