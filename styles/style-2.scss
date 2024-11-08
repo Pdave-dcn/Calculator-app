@@ -3,7 +3,7 @@
 @include general-properties();
 
 body {
-  background-color: $theme-1-main-background;
+  background-color: $theme-2-main-background;
   font-family: "League Spartan", Arial, Helvetica, sans-serif;
 }
 
@@ -17,7 +17,7 @@ body {
       @include header-gen-prop();
 
       .title {
-        color: white;
+        color: $theme-2-numbers-on-btn;
       }
 
       .theme {
@@ -26,12 +26,12 @@ body {
         &__title {
           font-size: 0.6rem;
           font-weight: 400;
-          color: white;
+          color: $theme-2-numbers-on-btn;
         }
 
         &__elements {
           &--btns {
-            background-color: $theme-1-toggle-keypad-background;
+            background-color: $theme-2-toggle-keypad-background;
             padding: 4px;
             border-radius: 15px;
             display: flex;
@@ -43,7 +43,7 @@ body {
               width: 7px;
               height: 7px;
               border-radius: 50%;
-              background-color: $theme-1-toggle-keypad-background;
+              background-color: $theme-2-toggle-keypad-background;
               position: relative;
               cursor: pointer;
             }
@@ -68,7 +68,7 @@ body {
             @include labels-gen-prop();
 
             .label {
-              color: white;
+              color: $theme-2-numbers-on-btn;
               @include label-specific-prop();
             }
           }
@@ -80,23 +80,20 @@ body {
       @include display-properties();
 
       .input-element {
-        background-color: $theme-1-screen-background;
+        background-color: $theme-2-screen-background;
       }
     }
 
     &--btns {
-      background-color: $theme-1-toggle-keypad-background;
+      background-color: $theme-2-toggle-keypad-background;
       @include keypad-gen-prop();
 
       button {
         @include btn-gen-prop();
-        background-color: $theme-1-key-background-2;
-        box-shadow: 0 4px 0 $theme-1-key-shadow-3;
+        background-color: $theme-2-key-background-2;
+        box-shadow: 0 4px 0 $theme-2-key-shadow-3;
+        color: $theme-2-numbers-on-btn;
         cursor: pointer;
-
-        &:hover {
-          background-color: hsl(36, 20%, 95%);
-        }
 
         &:active {
           background-color: white;
@@ -109,28 +106,24 @@ body {
       }
 
       button:nth-child(4) {
-        background-color: $theme-1-key-background;
-        box-shadow: 0 4px 0 $theme-1-key-shadow;
+        background-color: $theme-2-key-background;
+        box-shadow: 0 4px 0 $theme-2-key-shadow;
         color: white;
-        @include reset-del-btn-inter();
+        @include reset-del-btn-inter-2();
       }
 
       button:nth-child(17) {
-        background-color: $theme-1-key-background;
-        box-shadow: 0 4px 0 $theme-1-key-shadow;
-        @include reset-del-btn-inter();
+        background-color: $theme-2-key-background;
+        box-shadow: 0 4px 0 $theme-2-key-shadow;
+        @include reset-del-btn-inter-2();
       }
 
       button:nth-child(18) {
-        background-color: $theme-1-key-background-toggle;
-        box-shadow: 0 4px 0 $theme-1-key-shadow-2;
-
-        &:hover {
-          background-color: hsl(6, 67%, 56%);
-        }
+        background-color: $theme-2-key-background-toggle;
+        box-shadow: 0 4px 0 $theme-2-key-shadow-2;
 
         &:active {
-          background-color: hsl(6, 74%, 63%);
+          background-color: hsl(25, 93%, 47%);
         }
       }
     }

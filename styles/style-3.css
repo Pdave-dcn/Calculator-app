@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: hsl(222, 26%, 31%);
+  background-color: hsl(268, 75%, 9%);
   font-family: "League Spartan", Arial, Helvetica, sans-serif;
 }
 
@@ -30,7 +30,7 @@ body {
   flex: 1;
 }
 .calculator__container--header .title {
-  color: white;
+  color: hsl(52, 100%, 62%);
 }
 .calculator__container--header .theme {
   display: flex;
@@ -40,10 +40,10 @@ body {
 .calculator__container--header .theme__title {
   font-size: 0.6rem;
   font-weight: 400;
-  color: white;
+  color: hsl(52, 100%, 62%);
 }
 .calculator__container--header .theme__elements--btns {
-  background-color: hsl(223, 31%, 20%);
+  background-color: hsl(268, 71%, 12%);
   padding: 4px;
   border-radius: 15px;
   display: flex;
@@ -56,7 +56,7 @@ body {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: hsl(223, 31%, 20%);
+  background-color: hsl(268, 71%, 12%);
   position: relative;
   cursor: pointer;
 }
@@ -99,7 +99,7 @@ body {
   pointer-events: none;
 }
 .calculator__container--header .theme__elements--labels .label {
-  color: white;
+  color: hsl(52, 100%, 62%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,10 +120,10 @@ body {
   border-radius: 8px;
 }
 .calculator__container--display .input-element {
-  background-color: hsl(224, 36%, 15%);
+  background-color: hsl(268, 71%, 12%);
 }
 .calculator__container--btns {
-  background-color: hsl(223, 31%, 20%);
+  background-color: hsl(268, 71%, 12%);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -137,15 +137,13 @@ body {
   height: 50px;
   font-size: 1.5rem;
   font-weight: 700;
-  background-color: hsl(30, 25%, 89%);
-  box-shadow: 0 4px 0 hsl(28, 16%, 65%);
+  background-color: hsl(268, 47%, 21%);
+  box-shadow: 0 4px 0 hsl(290, 70%, 36%);
+  color: hsl(52, 100%, 62%);
   cursor: pointer;
 }
-.calculator__container--btns button:hover {
-  background-color: hsl(36, 20%, 95%);
-}
 .calculator__container--btns button:active {
-  background-color: white;
+  background-color: hsl(268, 46%, 40%);
 }
 .calculator__container--btns button:nth-child(17),
 .calculator__container--btns button:nth-child(18) {
@@ -153,29 +151,27 @@ body {
   color: white;
 }
 .calculator__container--btns button:nth-child(4) {
-  background-color: hsl(225, 21%, 49%);
-  box-shadow: 0 4px 0 hsl(224, 28%, 35%);
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0 4px 0 hsl(285, 91%, 52%);
   color: white;
 }
 .calculator__container--btns button:nth-child(4):active {
-  background-color: hsl(228, 20%, 71%);
+  background-color: hsl(281, 86%, 39%);
 }
 .calculator__container--btns button:nth-child(17) {
-  background-color: hsl(225, 21%, 49%);
-  box-shadow: 0 4px 0 hsl(224, 28%, 35%);
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0 4px 0 hsl(285, 91%, 52%);
 }
 .calculator__container--btns button:nth-child(17):active {
-  background-color: hsl(228, 20%, 71%);
+  background-color: hsl(281, 86%, 39%);
 }
 .calculator__container--btns button:nth-child(18) {
-  background-color: hsl(6, 63%, 50%);
-  box-shadow: 0 4px 0 hsl(6, 70%, 34%);
-}
-.calculator__container--btns button:nth-child(18):hover {
-  background-color: hsl(6, 67%, 56%);
+  background-color: hsl(176, 100%, 44%);
+  box-shadow: 0 4px 0 hsl(177, 92%, 70%);
+  color: hsl(198, 20%, 13%);
 }
 .calculator__container--btns button:nth-child(18):active {
-  background-color: hsl(6, 74%, 63%);
+  background-color: hsl(176, 100%, 55%);
 }
 
 .attribution {
@@ -185,4 +181,4 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style-3.css.map */

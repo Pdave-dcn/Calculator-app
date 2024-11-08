@@ -36,7 +36,7 @@ $theme-2-key-shadow-3: hsl(35, 11%, 61%);
 
 //Text
 $theme-2-numbers-on-btn: hsl(60, 10%, 19%);
-$theme-2-numbers-on-screen: white;
+$theme-2-numbers-on-screen: hsl(60, 10%, 19%);
 
 /*** Theme 3 ***/
 
@@ -59,6 +59,39 @@ $theme-3-del-reset-btn: white;
 $theme-3-equal-btn: hsl(198, 20%, 13%);
 
 // Properties
+@mixin general-properties {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@mixin calc-general-properties {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin calc-container-gen-prop {
+  row-gap: 20px;
+  width: 30%;
+  margin-top: 6em;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin header-gen-prop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex: 1;
+}
+
+@mixin header-theme-prop {
+  display: flex;
+  align-items: last baseline;
+  gap: 1em;
+}
 
 @mixin radio-btns-config {
   content: "";
@@ -71,12 +104,71 @@ $theme-3-equal-btn: hsl(198, 20%, 13%);
   border-radius: 50%;
 }
 
-@mixin reset-del-btn-inter {
-  &:hover {
-    background-color: hsl(225, 19%, 59%);
-  }
+@mixin reset-equal-btns {
+  grid-column: span 2;
+  color: white;
+}
 
+@mixin labels-gen-prop {
+  display: flex;
+  gap: 10px;
+  pointer-events: none;
+}
+
+@mixin label-specific-prop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+  width: 10px;
+  font-size: 10px;
+}
+
+@mixin display-properties {
+  box-sizing: border-box;
+
+  .input-element {
+    box-sizing: border-box;
+    pointer-events: none;
+    border: none;
+    height: 80px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+  }
+}
+
+@mixin keypad-gen-prop {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+@mixin btn-gen-prop {
+  border-radius: 8px;
+  border: none;
+  height: 50px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@mixin reset-del-btn-inter {
   &:active {
     background-color: hsl(228, 20%, 71%);
+  }
+}
+
+@mixin reset-del-btn-inter-2 {
+  &:active {
+    background-color: hsl(185, 42%, 50%);
+  }
+}
+
+@mixin reset-del-btn-inter-3 {
+  &:active {
+    background-color: hsl(281, 86%, 39%);
   }
 }
