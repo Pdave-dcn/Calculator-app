@@ -94,10 +94,6 @@ body {
         box-shadow: 0 4px 0 $theme-1-key-shadow-3;
         cursor: pointer;
 
-        &:hover {
-          background-color: hsl(36, 20%, 95%);
-        }
-
         &:active {
           background-color: white;
         }
@@ -125,10 +121,6 @@ body {
         background-color: $theme-1-key-background-toggle;
         box-shadow: 0 4px 0 $theme-1-key-shadow-2;
 
-        &:hover {
-          background-color: hsl(6, 67%, 56%);
-        }
-
         &:active {
           background-color: hsl(6, 74%, 63%);
         }
@@ -144,3 +136,5 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+@include media-queries();
