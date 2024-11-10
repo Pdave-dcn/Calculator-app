@@ -122,8 +122,8 @@ $theme-3-equal-btn: hsl(198, 20%, 13%);
     font-size: $font-size-numbers;
     font-weight: 700;
     font-family: "League Spartan", Arial, Helvetica, sans-serif;
-    direction: rtl;
-    //text-align: left;
+    direction: ltr;
+    text-align: right;
     overflow: hidden;
   }
 }

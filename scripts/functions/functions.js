@@ -12,19 +12,19 @@ let resultDisplayed = false;
 export function displayOperation(elementToDisplay) {
   const display = document.querySelector(".js-display");
   const elementValue = elementToDisplay.innerText;
-  const operators = ["+", "-", "/", "x", "=", "RESET", "DEL"];
+  const operators = ["+", "-", "/", "x", "=", ".", "RESET", "DEL"];
 
   if (operators.includes(elementValue)) {
     if (elementValue === "=" && firstNumber !== null && currentOperator) {
-      if (display.value === "") {
-        return;
-      }
+      if (display.value === "") return;
+
       secondNumber = parseFloat(display.value);
       display.value = calculateResult(
         firstNumber,
         secondNumber,
         currentOperator
       );
+
       firstNumber = null;
       secondNumber = null;
       currentOperator = null;
@@ -32,15 +32,25 @@ export function displayOperation(elementToDisplay) {
     } else if (
       elementValue !== "=" &&
       elementValue !== "RESET" &&
-      elementValue !== "DEL"
+      elementValue !== "DEL" &&
+      elementValue !== "."
     ) {
-      if (isNaN(parseFloat(display.value)) || display.value === "") {
-        return;
+      if (display.value === "") return;
+
+      if (firstNumber !== null && currentOperator) {
+        secondNumber = parseFloat(display.value);
+        display.value = calculateResult(
+          firstNumber,
+          secondNumber,
+          currentOperator
+        );
+        firstNumber = parseFloat(display.value);
+        resultDisplayed = true;
+      } else {
+        firstNumber = parseFloat(display.value);
       }
 
-      firstNumber = parseFloat(display.value);
       currentOperator = elementValue;
-      display.value = currentOperator;
 
       setTimeout(() => {
         display.value = "";
@@ -53,11 +63,7 @@ export function displayOperation(elementToDisplay) {
       resultDisplayed = false;
     } else if (elementValue === ".") {
       if (!display.value.includes(".")) {
-        if (display.value === "") {
-          display.value = "0.";
-        } else {
-          display.value += elementValue;
-        }
+        display.value = display.value === "" ? "0." : display.value + ".";
       }
     } else if (elementValue === "DEL") {
       display.value = display.value.slice(0, -1);
