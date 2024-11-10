@@ -1,4 +1,4 @@
-import { loadTheme } from "./functions/functions.js";
+import { loadTheme, displayOperation } from "./functions/functions.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   document
@@ -8,4 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
         loadTheme(event.target.value);
       });
     });
+
+  document.addEventListener("click", (event) => {
+    if (event.target.closest("button[type='button']")) {
+      displayOperation(event.target);
+    }
+  });
 });

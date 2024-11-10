@@ -62,9 +62,9 @@ body {
   position: absolute;
   top: 50%;
   bottom: 50%;
-  transform: translate(-20%, -50%);
-  width: 10px;
-  height: 10px;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   background-color: hsl(6, 63%, 50%);
 }
@@ -73,9 +73,9 @@ body {
   position: absolute;
   top: 50%;
   bottom: 50%;
-  transform: translate(-20%, -50%);
-  width: 10px;
-  height: 10px;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   background-color: hsl(25, 98%, 40%);
 }
@@ -84,9 +84,9 @@ body {
   position: absolute;
   top: 50%;
   bottom: 50%;
-  transform: translate(-20%, -50%);
-  width: 10px;
-  height: 10px;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   background-color: hsl(176, 100%, 44%);
 }
@@ -115,9 +115,15 @@ body {
   padding: 10px;
   width: 100%;
   border-radius: 8px;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "League Spartan", Arial, Helvetica, sans-serif;
+  direction: rtl;
+  overflow: hidden;
 }
 .calculator__container--display .input-element {
   background-color: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
 }
 .calculator__container--btns {
   background-color: hsl(268, 71%, 12%);

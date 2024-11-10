@@ -82,9 +82,9 @@ $theme-3-equal-btn: hsl(198, 20%, 13%);
   position: absolute;
   top: 50%;
   bottom: 50%;
-  transform: translate(-20%, -50%);
-  width: 10px;
-  height: 10px;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
 }
 
@@ -119,6 +119,12 @@ $theme-3-equal-btn: hsl(198, 20%, 13%);
     padding: 10px;
     width: 100%;
     border-radius: 8px;
+    font-size: $font-size-numbers;
+    font-weight: 700;
+    font-family: "League Spartan", Arial, Helvetica, sans-serif;
+    direction: rtl;
+    //text-align: left;
+    overflow: hidden;
   }
 }
 
