@@ -40,27 +40,18 @@ body {
             input[type="radio"] {
               -webkit-appearance: none;
               appearance: none;
-              width: 7px;
-              height: 7px;
+              width: 8px;
+              height: 8px;
               border-radius: 50%;
               background-color: $theme-2-toggle-keypad-background;
               position: relative;
               cursor: pointer;
             }
 
-            #theme-1:checked::before {
-              @include radio-btns-config();
-              background-color: $theme-1-key-background-toggle;
-            }
-
             #theme-2:checked::before {
               @include radio-btns-config();
+              left: 50%;
               background-color: $theme-2-key-background-toggle;
-            }
-
-            #theme-3:checked::before {
-              @include radio-btns-config();
-              background-color: $theme-3-key-background-toggle;
             }
           }
 

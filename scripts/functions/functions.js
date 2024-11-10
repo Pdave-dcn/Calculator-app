@@ -2,6 +2,22 @@ export function loadTheme(themeNumber) {
   const link = document.getElementById("theme-stylesheet");
 
   link.href = `styles/style-${themeNumber}.css`;
+
+  localStorage.setItem("selectedTheme", themeNumber);
+}
+
+export function getSavedTheme() {
+  const savedTheme = localStorage.getItem("selectedTheme");
+
+  if (savedTheme) {
+    loadTheme(savedTheme);
+
+    const selectedRadioButton = document.getElementById(`theme-${savedTheme}`);
+
+    if (selectedRadioButton) {
+      selectedRadioButton.checked = true;
+    }
+  }
 }
 
 let firstNumber = null;

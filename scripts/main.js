@@ -1,4 +1,10 @@
-import { loadTheme, displayOperation } from "./functions/functions.js";
+import {
+  loadTheme,
+  displayOperation,
+  getSavedTheme,
+} from "./functions/functions.js";
+
+window.addEventListener("DOMContentLoaded", getSavedTheme());
 
 document.addEventListener("DOMContentLoaded", () => {
   document
