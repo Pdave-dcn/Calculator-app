@@ -6,15 +6,15 @@ A JavaScript-based calculator with theme selection and progressive display of op
 
 ### Theme 1
 
-![Calculator Theme 1](screenshots/Theme-1.png "Calculator Theme 1")
+![Calculator Theme 1](Screenshots/Theme-1.png "Calculator Theme 1")
 
 ### Theme 2
 
-![Calculator Theme 2](screenshots/Theme-2.png "Calculator Theme 2")
+![Calculator Theme 2](Screenshots/Theme-2.png "Calculator Theme 2")
 
 ### Theme 3
 
-![Calculator Theme 3](screenshots/Theme-3.png "Calculator Theme 3")
+![Calculator Theme 3](Screenshots/Theme-3.png "Calculator Theme 3")
 
 ## Features
 
