@@ -59,7 +59,7 @@ $theme-3-equal-btn: hsl(198, 20%, 13%);
 @mixin calc-container-gen-prop {
   row-gap: 20px;
   width: 30%;
-  margin-top: 6em;
+  margin-top: 4em;
   display: flex;
   flex-direction: column;
 }
