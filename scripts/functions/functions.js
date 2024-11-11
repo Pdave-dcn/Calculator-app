@@ -95,6 +95,7 @@ export function displayOperation(elementToDisplay) {
   } else {
     if (resultDisplayed) {
       display.value = "";
+      displayOperation.value = "";
       resultDisplayed = false;
     }
     display.value += elementValue;
