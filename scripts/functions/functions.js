@@ -27,6 +27,7 @@ let resultDisplayed = false;
 
 export function displayOperation(elementToDisplay) {
   const display = document.querySelector(".js-display");
+  const displayOperation = document.querySelector(".js-display-operation");
   const elementValue = elementToDisplay.innerText;
   const operators = ["+", "-", "/", "x", "=", ".", "RESET", "DEL"];
 
@@ -40,6 +41,8 @@ export function displayOperation(elementToDisplay) {
         secondNumber,
         currentOperator
       );
+
+      displayOperation.value = `${firstNumber} ${currentOperator} ${secondNumber} =`;
 
       firstNumber = null;
       secondNumber = null;
@@ -61,6 +64,8 @@ export function displayOperation(elementToDisplay) {
           currentOperator
         );
         firstNumber = parseFloat(display.value);
+
+        displayOperation.value = `${firstNumber} ${currentOperator}`;
         resultDisplayed = true;
       } else {
         firstNumber = parseFloat(display.value);
@@ -68,11 +73,14 @@ export function displayOperation(elementToDisplay) {
 
       currentOperator = elementValue;
 
+      displayOperation.value = `${firstNumber} ${currentOperator}`;
+
       setTimeout(() => {
         display.value = "";
       }, 500);
     } else if (elementValue === "RESET") {
       display.value = "";
+      displayOperation.value = "";
       firstNumber = null;
       secondNumber = null;
       currentOperator = null;
@@ -93,7 +101,7 @@ export function displayOperation(elementToDisplay) {
   }
 }
 
-export function calculateResult(num1, num2, operator) {
+function calculateResult(num1, num2, operator) {
   switch (operator) {
     case "+":
       return num1 + num2;

@@ -70,9 +70,15 @@ body {
     &--display {
       @include display-properties();
 
-      .input-element {
+      .input-element,
+      .operation-display {
         background-color: $theme-3-screen-background;
         color: $theme-3-numbers-on-btn;
+      }
+
+      .display-operation {
+        font-size: 1rem;
+        font-weight: 400;
       }
     }
 
@@ -126,9 +132,10 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: $theme-3-key-shadow-3;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: $theme-3-numbers-on-btn;
 }
 
 @include media-queries();

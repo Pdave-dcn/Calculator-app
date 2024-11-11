@@ -4,7 +4,7 @@ import {
   getSavedTheme,
 } from "./functions/functions.js";
 
-window.addEventListener("DOMContentLoaded", getSavedTheme());
+window.addEventListener("DOMContentLoaded", getSavedTheme);
 
 document.addEventListener("DOMContentLoaded", () => {
   document

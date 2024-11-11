@@ -111,6 +111,7 @@ $theme-3-equal-btn: hsl(198, 20%, 13%);
 
 @mixin display-properties {
   box-sizing: border-box;
+  position: relative;
 
   .input-element {
     box-sizing: border-box;
@@ -126,6 +127,18 @@ $theme-3-equal-btn: hsl(198, 20%, 13%);
     direction: ltr;
     text-align: right;
     overflow: hidden;
+  }
+
+  .display-input {
+    padding-top: 50px;
+  }
+
+  .display-operation {
+    position: absolute;
+    height: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 100;
   }
 }
 

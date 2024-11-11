@@ -70,9 +70,15 @@ body {
     &--display {
       @include display-properties();
 
-      .input-element {
+      .input-element,
+      .display-operation {
         background-color: $theme-1-screen-background;
         color: white;
+      }
+
+      .display-operation {
+        font-size: 1rem;
+        font-weight: 400;
       }
     }
 
@@ -124,9 +130,10 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: white;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: lighten($color: $theme-1-key-background-toggle, $amount: 10);
 }
 
 @include media-queries();
