@@ -90,6 +90,7 @@ body {
         @include btn-gen-prop();
         background-color: $theme-1-key-background-2;
         box-shadow: 0 4px 0 $theme-1-key-shadow-3;
+        color: $theme-1-numbers-on-button;
         cursor: pointer;
 
         &:active {

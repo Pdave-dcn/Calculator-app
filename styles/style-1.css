@@ -140,6 +140,7 @@ body {
   font-family: "League Spartan";
   background-color: hsl(30, 25%, 89%);
   box-shadow: 0 4px 0 hsl(28, 16%, 65%);
+  color: hsl(221, 14%, 31%);
   cursor: pointer;
 }
 .calculator__container--btns button:active {
