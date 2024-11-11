@@ -66,7 +66,7 @@ export function displayOperation(elementToDisplay) {
         firstNumber = parseFloat(display.value);
 
         displayOperation.value = `${firstNumber} ${currentOperator}`;
-        resultDisplayed = true;
+        resultDisplayed = false;
       } else {
         firstNumber = parseFloat(display.value);
       }
@@ -95,6 +95,7 @@ export function displayOperation(elementToDisplay) {
   } else {
     if (resultDisplayed) {
       display.value = "";
+      displayOperation.value = "";
       resultDisplayed = false;
     }
     display.value += elementValue;
